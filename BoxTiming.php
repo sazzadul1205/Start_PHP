@@ -11,10 +11,22 @@
     <div>
         <form method="POST">
             <label for="name">Your Name:</label>
-            <input type="text" name="name" id="name">
+            <input
+                type="text"
+                name="name"
+                id="name"
+                value="<?php if (isset($_POST['name'])) {
+                            echo $_POST['name'];
+                        } ?>">
             <br>
             <label for="email">Email Address:</label>
-            <input type="email" name="email" id="email">
+            <input
+                type="email"
+                name="email"
+                id="email"
+                value="<?php if (isset($_POST['email'])) {
+                            echo $_POST['email'];
+                        } ?>">
             <br>
             <label for="language">Favorite Programming Language:</label>
             <select name="language[]" id="language" multiple>
